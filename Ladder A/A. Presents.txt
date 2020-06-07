@@ -1,0 +1,19 @@
+Q https://codeforces.com/problemset/problem/136/A
+
+CODE
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i,n,a[101],p;
+    cin>>n;
+    for(i=1;i<=n;i++){
+        cin>>p;
+        a[p]=i;
+    }
+    for(i=1;i<n+1;i++)
+    cout<<a[i]<<" ";
+    
+return 0;
+}

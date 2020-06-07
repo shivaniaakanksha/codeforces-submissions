@@ -1,0 +1,22 @@
+Q https://codeforces.com/problemset/problem/263/A
+
+CODE
+
+#include <iostream>
+using namespace std;
+int main()
+{
+ int i,j,a[5][5],b,c;
+ for(i=1;i<=5;i++){
+     for(j=1;j<=5;j++){
+         cin>>a[i-1][j-1];
+         if(a[i-1][j-1]==1){
+             b=i;
+             c=j;
+         }
+     }
+ }
+  int cnt = abs(3-b) + abs(3-c);
+  cout<<cnt;
+  return 0;
+}
