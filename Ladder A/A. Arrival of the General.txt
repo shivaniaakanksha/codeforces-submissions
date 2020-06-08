@@ -1,0 +1,21 @@
+Q https://codeforces.com/problemset/problem/144/A
+
+CODE 
+
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main(){
+ int n,i,mx=0,mn=101,mxx,mnx,x;
+ cin>>n;
+ for(i=0;i<n;i++){
+ cin>>x;
+ if(x>mx){mx=x;mxx=i;}
+ if(x<=mn){mn=x;mnx=i;}
+ }
+ n+=mxx-mnx-1;
+ if(mxx>mnx) n--;
+ cout<<n;
+ return 0;
+}
