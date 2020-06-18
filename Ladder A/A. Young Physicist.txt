@@ -1,0 +1,31 @@
+Q http://codeforces.com/problemset/problem/69/A
+
+CODE     
+
+#include<bits/stdc++.h>
+     
+    using namespace std;
+     
+    int main(){
+     int n;
+     cin>>n;
+     vector<int> a(n);
+     vector<int> b(n);
+     vector<int> c(n);
+     
+     for(int i=0;i<n;i++){
+         cin>>a[i]>>b[i]>>c[i];
+     }
+     
+     int suma=0,sumb=0,sumc=0;
+     for(int i=0;i<n;i++){
+         suma=suma+a[i];
+         sumb=sumb+b[i];
+         sumc=sumc+c[i];
+     }
+     
+     if((suma == 0) && (sumb == 0 )&& (sumc == 0 )) cout<<"YES";
+     else cout<<"NO";
+     
+     return 0;
+    } 
