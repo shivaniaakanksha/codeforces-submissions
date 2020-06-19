@@ -1,0 +1,21 @@
+Q http://codeforces.com/problemset/problem/443/A
+
+CODE
+
+    #include <bits/stdc++.h>
+            
+    using namespace std;
+            
+    int main()
+    {
+      string s;
+      getline(cin,s);
+      set<int> a;
+      for(int i=0;i<s.length();i++){
+          if(s[i]=='{' || s[i]=='}' || s[i]==',' || s[i]==' ') continue;
+          else a.insert(s[i]);
+      }
+            cout<<a.size();
+     
+      return 0;        
+    }
