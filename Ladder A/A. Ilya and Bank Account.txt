@@ -1,0 +1,16 @@
+Q https://codeforces.com/problemset/problem/313/A
+
+CODE 
+
+    #include<iostream>
+    using namespace std;
+        
+    int main(){
+            
+    int n;
+    cin>>n;
+    cout<<max(n,max(n/10,(n/100)*10+n%10));
+        
+    return 0;
+     
+    }

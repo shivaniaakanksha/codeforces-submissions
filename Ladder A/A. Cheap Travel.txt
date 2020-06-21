@@ -1,0 +1,19 @@
+Q https://codeforces.com/problemset/problem/466/A
+
+CODE 
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    #define ll long long
+     
+    int main() {
+     
+     ll n,m,a,b;
+     
+     cin>>n>>m>>a>>b;
+     if (m * a <= b) cout << n * a;
+     else cout << (n/m) * b + min((n%m) * a, b);
+     
+     return 0;
+    }
