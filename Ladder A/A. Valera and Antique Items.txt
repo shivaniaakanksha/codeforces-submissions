@@ -1,0 +1,31 @@
+Q https://codeforces.com/problemset/problem/441/A
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+         
+        int main(){
+        	int n,v;
+        	cin>>n>>v;
+        	vector<int>vc;
+        	for(int i=0;i<n;i++){
+        		int x;
+        		cin>>x;
+        		int p[x];
+        		for(int j=0;j<x;j++){
+        			cin>>p[j];
+        		}
+        		sort(p,p+x);
+        		if(p[0]<v){
+        			vc.push_back(i+1);
+        		}
+        		else{
+        			continue;
+        		}
+        	}
+        	cout<<vc.size()<<endl;
+        	for(int i=0;i<vc.size();i++){
+        		cout<<vc[i]<<" ";
+        	}
+        }

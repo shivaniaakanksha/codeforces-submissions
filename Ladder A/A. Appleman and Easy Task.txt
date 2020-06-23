@@ -1,0 +1,53 @@
+Q https://codeforces.com/problemset/problem/462/A
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+    typedef long long ll;
+     
+    char a[105][105];
+    int main() 
+    {
+     int n;
+     cin >>n;
+     for(int i=0; i<n; i++)
+     {
+       for(int j=0; j<n; j++)
+       {
+         cin >> a[i][j];
+       }
+     }
+     bool b=true;
+     for(int i=0; i<n; i++)
+     {
+       for(int j=0; j<n; j++)
+       {
+         int temp =0;
+         if(i!=0)
+         {
+           if(a[i-1][j]=='o') temp++;
+         }
+     
+         if(i!=n-1)
+         {
+            if(a[i+1][j]=='o') temp++;
+         }
+     
+         if(j!=0)
+         {
+            if(a[i][j-1]=='o') temp++;
+         }
+     
+         if(j!=n-1)
+         {
+            if(a[i][j+1]=='o') temp++;
+         }
+         
+         if(temp%2!=0) b=false;
+       }
+     }
+     if(b) cout << "YES";
+     else cout << "NO";
+     return 0;
+    }
