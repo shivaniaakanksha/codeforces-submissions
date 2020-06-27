@@ -1,0 +1,21 @@
+Q https://codeforces.com/problemset/problem/483/A
+
+CODE 
+
+        #include<iostream>
+        using namespace std;
+         
+        int main(){
+        long long l,r;
+        cin>>l>>r;
+        if(l%2==1){
+            l=l+1;
+        }
+        if (r-l<=1){
+            cout<<-1;
+        }
+        else {
+            cout<<l<<" "<<(l+1)<<" "<<(l+2);
+        }
+        return 0;
+        }

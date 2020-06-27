@@ -1,0 +1,25 @@
+Q https://codeforces.com/problemset/problem/404/A
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+         
+        int main()
+        {
+            int n;
+            cin >> n;
+            char c;
+            set <char> s1,s2;
+            for(int i=0;i<n;i++)
+            for(int j=0;j<n;j++){
+                cin >> c;
+                if(i==j||j==n-i-1)s1.insert(c);
+                else
+                    s2.insert(c);
+            }
+            if(s1!=s2&&s1.size()==1&&s2.size()==1) cout << "YES";
+                else
+                    cout << "NO";
+            return 0;
+        }

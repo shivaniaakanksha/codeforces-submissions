@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/496/A
+
+CODE 
+
+    #include<bits/stdc++.h>
+    using namespace std;
+        
+    int main()
+    {
+        int i=0,n,a=0,b=10000;
+        cin>>n;
+        int ar[n];
+        for(i=0;i<n;i++)
+        cin>>ar[i];
+        for(i=1;i<n;i++){
+        	a=max(a,ar[i]-ar[i-1]);
+        }
+        for(i=1;i<n-1;i++){
+            b=min(b,max(ar[i+1]-ar[i-1],a));
+        }
+        cout<<b;
+        return 0;
+         
+    }
