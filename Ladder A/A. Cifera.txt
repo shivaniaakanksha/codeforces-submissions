@@ -1,0 +1,22 @@
+Q https://codeforces.com/problemset/problem/114/A
+
+CODE 
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main() {
+        
+        long long int k,l,i,a;
+        cin>>k>>l;
+        for( i=1; i<=32; i++){
+        a=pow(k,i);
+        if(l==a){
+        cout<<"YES"<<endl<<i-1;
+        return 0;
+        }
+         
+        }
+        printf("NO\n");
+            return 0;
+        }

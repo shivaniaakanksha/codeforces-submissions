@@ -1,0 +1,38 @@
+Q https://codeforces.com/problemset/problem/152/A
+
+CODE 
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        
+        int main()
+        {
+        	int n,m;
+        	cin>>n>>m;
+        	char a[n][m];
+        	char b[m];
+        	for(int i=0;i<m;i++)
+        	b[i]=0;
+        	for(int i=0;i<n;i++)
+        	{
+        		for(int j=0;j<m;j++)
+        		{
+        			cin>>a[i][j];
+        			if(a[i][j]>b[j])
+        			b[j]=a[i][j];
+        		}
+        	}
+        	int c=0;
+        	for(int i=0;i<n;i++)
+        	{
+        		for(int j=0;j<m;j++)
+        		{
+        			if(a[i][j]==b[j])
+        			{
+        				c++;
+        				break;
+        			}
+        		}
+        	}
+        	cout<<c;
+        }

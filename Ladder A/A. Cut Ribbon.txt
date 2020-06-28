@@ -1,0 +1,18 @@
+Q https://codeforces.com/problemset/problem/189/A
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+         
+    int main() 
+    {
+        	int n,a,b,c,i,j,x=0;
+        	cin>>n>>a>>b>>c;
+        	for(i=0;i*a<=n;i++)
+        	for(j=0;i*a+j*b<=n;j++)
+        	if((n-i*a-j*b)%c==0)
+        	x=max(x,i+j+(n-i*a-j*b)/c);
+        	cout<<x;
+        	return 0;
+    }
