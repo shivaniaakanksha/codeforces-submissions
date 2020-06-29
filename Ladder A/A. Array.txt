@@ -1,0 +1,40 @@
+Q https://codeforces.com/problemset/problem/300/A
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        
+        int main() {
+        	int n;
+        	cin >> n;
+        	vector <int> pos, neg;
+        	for (int i=0; i<n; i++) {
+        		int tmp;
+        		cin >> tmp;
+        		if (tmp < 0) 
+        			neg.push_back(tmp);
+        		else if ( tmp > 0)
+        			pos.push_back(tmp);
+        	}
+         
+        	cout << 1 << " " << neg[0] << endl;
+        	bool flag = (neg.size() % 2 == 0);
+        	
+        	cout << pos.size() + neg.size() - 1 - flag ;
+         
+        	for (int i=1; i< neg.size() - flag; i++) {
+        		cout  << " " << neg[i];
+        	}	
+        	for (auto v : pos) 
+        		cout << " " << v;
+        	cout << endl;
+         
+        	cout << 1 + flag << " 0";
+        	if ( flag) cout << " "  << neg[neg.size()-1];
+        	cout << endl;
+         
+         
+        	return 0;
+         
+        }

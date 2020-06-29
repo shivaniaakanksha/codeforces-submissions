@@ -1,0 +1,28 @@
+Q https://codeforces.com/problemset/problem/75/A
+
+CODE 
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int n,a,b,i,ans;
+     
+    int nozero(int x1){
+        int m=1, k=0, x=0;
+        while(x1>0) {
+            k=x1%10;    
+            x=x+k*m;
+        if(k!=0)   m=m*10;
+        x1=x1/10;
+         }
+     return x;
+    }
+     
+    int main(){
+       cin>>a>>b;
+       n=a+b;
+       if(nozero(a)+nozero(b)==nozero(n)) cout<<"YES";
+       else cout<<"NO";
+       return 0;
+       
+    }

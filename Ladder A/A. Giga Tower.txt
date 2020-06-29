@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/488/A
+
+CODE 
+
+    #include<iostream>
+    using namespace std;
+     
+    int main(){
+    int n,t=0,x=0; cin>>n;
+    for(int i=1;true;i++){
+     
+            x=n+i;
+     
+        while(x!=0){
+            int t=x%10;
+            if(t==8||t==-8)
+                {cout<<i;
+            return 0;}
+            else x/=10;
+        }
+        
+    }
+        
+    }

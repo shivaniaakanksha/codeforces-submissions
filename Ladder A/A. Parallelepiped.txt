@@ -1,0 +1,14 @@
+Q https://codeforces.com/problemset/problem/224/A
+
+CODE
+
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    int main(){
+        
+        int ab,bc,ca; 
+        cin>>ab>>bc>>ca; 
+        cout<<4*(sqrt((ab*ca)/bc)+sqrt((ab*bc)/ca)+sqrt((bc*ca)/ab));
+        return 0;
+    }
