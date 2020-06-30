@@ -1,0 +1,32 @@
+Q https://codeforces.com/problemset/problem/373/A
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+         
+    int main()
+    {
+        int k,i,j;
+        cin>>k;
+        k=k*2;
+        int ara[10]={0};
+        string s;
+        for(i=0;i<4;i++)
+        {
+            cin>>s;
+            for(j=0;j<4;j++)
+            {
+                if(s[j]!='.') ara[s[j]-'0']++;
+            }
+        }
+        bool yes = true;
+        for(i=0;i<10;i++)
+        {
+            if(ara[i]>k)yes = false;
+        }
+     
+        if(yes)printf("YES\n");
+        else printf("NO\n");
+        return 0;
+    }

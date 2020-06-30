@@ -2,29 +2,31 @@ Q https://codeforces.com/problemset/problem/43/A
 
 CODE 
 
-    #include <bits/stdc++.h>
-    using namespace std;
-     
-    #define ll long long
-     
-    int main()
-    {
-        int sum=0,cnt=0;
-        string s1,s2;
-        cin >> n;
-        cin >> s1;
-        sum++;
-        while(--n)
+
+        #include <bits/stdc++.h>
+        using namespace std;
+         
+        #define ll long long
+         
+        int main()
         {
-            cin >> s;
-            if(s1==s)  sum++;
-            else { s2=s; 
-            cnt++; 
+            int n,sum=0,cnt=0;
+            string s,s1,s2;
+            cin >> n;
+            cin >> s1;
+            sum++;
+            while(--n)
+            {
+                cin >> s;
+                if(s1==s)  sum++;
+                else { 
+                s2=s; 
+                cnt++; 
+                }
             }
+            if(sum>cnt) cout << s1;
+            else cout << s2;
+         
+         
+            return 0;
         }
-        if(sum>cnt) cout << s1;
-        else cout << s2;
-     
-     
-        return 0;
-    }

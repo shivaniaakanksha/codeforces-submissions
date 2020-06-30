@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/355/A
+
+CODE 
+
+        #include<iostream>
+        using namespace std;
+        
+        int main()
+        {
+           int n,k;
+           cin>>k>>n;
+           if(n==0&&k>1)
+           {
+           	cout<<"No solution";
+           	return 0;
+           }
+           cout<<n;
+           
+           for(int i=0;i<k-1;i++)
+           {
+           	cout<<0;
+           }
+           return 0;
+        }
