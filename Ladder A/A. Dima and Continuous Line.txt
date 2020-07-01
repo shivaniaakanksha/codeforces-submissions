@@ -1,0 +1,32 @@
+Q https://codeforces.com/problemset/problem/358/A
+
+CODE 
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main()
+    {
+        long long n,b,c,d,e,i,j;
+        cin>>n;
+        vector<long long> a(n);
+        for(i=0;i<n;i++)
+            cin>>a[i];
+        for(i=0;i<n-1;i++)
+        {
+            b=min(a[i],a[i+1]);
+            c=max(a[i],a[i+1]);
+            for(j=0;j<n-1;j++)
+            {
+                d=min(a[j],a[j+1]);
+                e=max(a[j],a[j+1]);
+                //b d c e ; d b e c
+                if((b<d&&d<c&&c<e)||(d<b&&b<e&&e<c))
+                {
+                    cout<<"yes"<<endl;
+                    return 0;
+                }
+            }
+        }
+        cout<<"no"<<endl;
+    }

@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/34/A
+
+CODE
+
+
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+        	int n; cin>>n;int a[n];
+        	for(int i=0;i<n;i++)	cin>>a[i];
+        	int b[n];
+        	b[0]=abs(a[n-1]-a[0]);
+        	int m=b[0],pos=0;
+        	for(int i=1;i<n;i++)
+        	{
+        		b[i]=abs(a[i]-a[i-1]);
+        		if(b[i]<m)
+        		{ m=b[i]; pos=i;}
+        	}
+        	if(pos==0) cout<<n<<" 1";
+        	else cout<<pos<<" "<<pos+1;
+        }

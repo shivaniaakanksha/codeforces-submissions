@@ -1,0 +1,26 @@
+Q https://codeforces.com/problemset/problem/408/A
+
+CODE
+    #include <bits/stdc++.h>
+    using namespace std;
+         
+    int main(){
+    	int n;
+    	cin >> n;
+    	vector<int>cash(n) , tot(n,0);
+    	for(int i=0;i<n;i++){
+    	    cin>>cash[i];
+    	}
+    	for(int i = 0 ; i < n ; i++){
+    		for(int j = 0 ; j < cash[i] ; j++){
+    			int a; 
+    			cin>>a; 
+    			tot[i]+=(a*5);
+    			tot[i]+=15;
+    		}				
+    	}
+    	sort(tot.begin(),tot.end());
+    	cout<<tot[0]<<endl;
+    	return 0;
+    }
+     

@@ -1,0 +1,27 @@
+Q https://codeforces.com/problemset/problem/143/A
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        
+        int main()
+        {
+          int r1,r2,c1,c2,d1,d2,a,b,c,d,i;
+          cin>>r1>>r2>>c1>>c2>>d1>>d2;
+          for(i=1;i<10;i++)
+          {
+             a=i;
+             b=r1-a;
+             c=c1-a;
+             d=r2-c;
+             if(a==b || a==c || a==d || b==c || b==d || c==d || b>9 || c>9 || d>9 || b<1 || c<1 || d<1) continue;
+             if((a+d)==d1 && (b+c)==d2)
+             {
+               cout<<a<<" "<<b<<endl;
+               cout<<c<<" "<<d<<endl;
+               return 0;
+             }
+          }
+            cout<<"-1";
+        }
