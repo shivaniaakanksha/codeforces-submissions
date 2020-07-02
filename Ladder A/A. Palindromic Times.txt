@@ -1,0 +1,25 @@
+Q https://codeforces.com/problemset/problem/108/A
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+    
+    int main () {
+ 
+	int hrs,mins;
+	char c;
+	cin>>hrs>>c>>mins;
+	do
+	{
+		mins++;
+	if(mins==60){
+	    mins=0;
+	    hrs++;
+	   }
+	 if(hrs==24) hrs=0;
+	}
+	while(hrs%10!=mins/10 || hrs/10!=mins%10);
+	cout<<hrs/10<<hrs%10<<':'<<mins/10<<mins%10;
+	return 0;
+    }
