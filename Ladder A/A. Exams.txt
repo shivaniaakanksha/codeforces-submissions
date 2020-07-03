@@ -1,0 +1,12 @@
+Q https://codeforces.com/problemset/problem/194/A
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        int main () {
+            long a,b;
+            cin>>a>>b;
+            if (b/a>=3) cout<<0;
+            else cout<<3*a-b;
+        }

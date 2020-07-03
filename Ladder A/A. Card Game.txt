@@ -1,0 +1,38 @@
+Q https://codeforces.com/problemset/problem/106/A
+
+CODE
+
+#include <bits\stdc++.h>
+    using namespace std;
+    
+    int main()
+    {
+    	char a;
+    	cin>>a;
+    	string s="6789TJQKA";
+    	char b,c,d,e;
+    	int x,y;
+    	cin>>b>>c;
+    	cin>>d>>e;
+    	if(c==a && e!=a)
+    	cout<<"YES";
+    	else if(c!=a && e==a)
+    	cout<<"NO";
+    	else if(c==e)
+    	{
+    		for(int i=0;i<9;i++)
+    		{
+    			if(s[i]==b)
+    			x=i;
+    			if(s[i]==d)
+    			y=i;
+    		}
+    		if(x>y)
+    		cout<<"YES";
+    		else
+    		cout<<"NO";
+    	}
+    	else
+    	cout<<"NO";
+    	return 0;
+    }

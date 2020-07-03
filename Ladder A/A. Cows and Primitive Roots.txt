@@ -1,0 +1,20 @@
+Q https://codeforces.com/problemset/problem/284/A
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+         
+        int main()
+        {
+        int n , count=0;
+        cin >> n;
+        for (int i=1;i<n;i++)
+        {
+            if(__gcd(n-1,i)==1)    {
+                count++;
+            }
+        }
+        cout << count;
+        return 0;
+        }

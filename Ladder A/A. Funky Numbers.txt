@@ -1,0 +1,29 @@
+Q https://codeforces.com/problemset/problem/192/A
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+         
+        long f(long x){
+            return (x)*(x+1)/2;
+        }
+        int main()
+        {
+        	long n, i = 0, j = 0;
+        	scanf("%ld", &n);
+        	for (i = 1; f(i) + f(j) <= n; i++)
+        	{
+        		for (j = i; f(i) + f(j) <= n; j++)
+        		{
+        			if (f(i) + f(j) == n)
+        			{
+        				printf("YES\n");
+        				return 0;
+        			}
+        		}
+        		j = 0;
+        	}
+        	printf("NO\n");
+        	return 0;
+        }

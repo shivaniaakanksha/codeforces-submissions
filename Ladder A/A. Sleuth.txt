@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/49/A
+
+CODE
+
+            #include <bits/stdc++.h>
+            using namespace std;
+             
+            int main()
+            {
+            	char a;
+            	string s;
+            	getline(cin,s);
+            	for(int i = 0 ; i < s.size() ; i++)
+            	if(s[i]!=' ' && s[i]!= '?') {
+            	    a=s[i];
+            	}
+            	if(a>96){
+            	    a-=32;
+            	}
+            	
+            	if(a=='A' or a=='E' or a=='I' or a=='O' or a=='U' or a=='Y') cout << "YES";
+            	else cout << "NO";
+            	return 0;
+            }
