@@ -1,0 +1,41 @@
+Q https://codeforces.com/problemset/problem/18/A
+
+CODE
+
+    #include<bits/stdc++.h>
+        using namespace std;
+        
+        bool res(int a,int b,int c,int d,int e,int f)
+        {
+            if(a==c && b==d)
+            return 0;
+            if(a==e && b==f)
+            return 0;
+            if(c==e && d==f)
+            return 0;
+     
+            int p=((c-a)*(e-a) + (d-b)*(f-b));
+            int q=((a-c)*(e-c) + (b-d)*(f-d));
+            int r=((c-e)*(a-e) + (d-f)*(b-f));
+            if(p==0 ||q==0 ||r==0)
+                return 1;
+            else
+                return 0;
+        }
+        int main()
+        {
+            int a,b,c,d,e,f;
+            cin>>a>>b>>c>>d>>e>>f;
+            int r=res(a,b,c,d,e,f);
+            if(r)
+                cout<<"RIGHT";
+            else if(res(a+1,b,c,d,e,f) || res(a-1,b,c,d,e,f) || res(a,b+1,c,d,e,f) ||res(a,b-1,c,d,e,f))
+                    cout<<"ALMOST";
+            else if(res(a,b,c+1,d,e,f) || res(a,b,c-1,d,e,f) || res(a,b,c,d+1,e,f) ||res(a,b,c,d-1,e,f))
+                    cout<<"ALMOST";
+            else if(res(a,b,c,d,e+1,f) || res(a,b,c,d,e-1,f) || res(a,b,c,d,e,f+1) ||res(a,b,c,d,e,f-1))
+                    cout<<"ALMOST";
+            else
+                cout<<"NEITHER";
+        }
+
