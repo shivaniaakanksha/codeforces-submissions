@@ -1,0 +1,33 @@
+Q https://codeforces.com/problemset/problem/302/A
+
+CODE
+
+        #include <iostream>
+        using namespace std;
+         
+        int main()
+        {
+        	int n,m,l,r,s,o=0,z;
+        	cin >> n >> m;
+        	int ans[m],k;
+        	for(int i=0;i<n;i++)
+        	{
+        		cin >> s;
+        		o += s == 1 ? 1 : 0;
+        	}
+        	z= n-o;
+        	for(int i=0 ; i< m;i++)
+        	{
+        		cin >> l >> r;
+        		k= r - l +1;
+        		if(k % 2 ==0 && k/2 <= o && k/2 <= z )
+        			ans[i] =  1 ;
+        		else
+        			ans[i] =  0 ;
+        	}
+        	for(int i=0 ; i< m;i++)
+        	{
+        		cout << ans[i] << "\n";
+        	}
+        	return 0;
+        }
