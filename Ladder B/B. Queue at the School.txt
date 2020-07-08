@@ -1,0 +1,24 @@
+Q https://codeforces.com/problemset/problem/266/B
+
+CODE
+
+    #include<bits/stdc++.h>
+        using namespace std;
+        
+        int main(){
+        	int n,t;
+        	string a;
+        	cin>>n>>t>>a;
+        	while(t--){
+        		for(int i=1;i<n;){
+        			if(a[i-1]=='B'&&a[i]=='G')
+        			{
+        			swap(a[i-1],a[i]);
+        			i+=2;
+        			}
+        			else
+        			i++;
+        		}
+        	}
+        	cout<<a;
+        }

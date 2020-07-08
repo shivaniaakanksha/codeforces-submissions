@@ -1,0 +1,22 @@
+Q https://codeforces.com/problemset/problem/467/B
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        
+        int main(){
+        int n,m,k,i,ans=0,p,x;
+        cin>>n>>m>>k;
+        vector <int> v(m);
+        for(i=0;i<m;i++)
+        cin>>v[i];
+        cin>>p;
+        for(i=0;i<m;i++){
+            x=p^v[i];
+            if(__builtin_popcount(x)<=k)
+            ans++;
+        }
+        cout<<ans;
+        	return 0;
+        }
