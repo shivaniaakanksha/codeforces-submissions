@@ -1,0 +1,15 @@
+Q https://codeforces.com/problemset/problem/450/B
+
+CODE
+
+        #include <iostream>
+        using namespace std;
+        #define mod 1000000007
+        typedef long long ll;
+        
+        int main() 
+        {
+        	ll x,y,n;cin>>x>>y>>n;
+        	ll a[]={x-y,x,y,y-x,-x,-y};
+        	cout<<(a[n%6]%mod+mod)%mod;
+        }

@@ -1,0 +1,29 @@
+Q https://codeforces.com/problemset/problem/508/B
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        
+        int main()
+        {string s;
+         cin>>s;
+         long long n=s.size(),temp=-1;
+         for(long long i=0;i<s.size();i++)
+         {if(s[i]%2==0&&s[i]<s[n-1])
+            {temp=i;
+             break;
+        	}
+          else if(s[i]%2==0&&s[i]>s[n-1])
+              temp=i;	
+         }
+         if(temp!=-1)
+         {swap(s[temp],s[n-1]);
+          cout<<s;
+         }
+         else
+         cout<<-1;
+         
+         
+        return 0;
+        }
