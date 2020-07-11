@@ -1,0 +1,18 @@
+Q https://codeforces.com/problemset/problem/259/B
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+         
+        int main()
+        {
+            int a,b,c,d,e,f,g,h,i,s;
+            cin>>a>>b>>c>>d>>e>>f>>g>>h>>i;
+            s = (b+c+d+f+g+h)/2;
+            a = s-(b+c);
+            e = s-(d+f);
+            i = s-(g+h);
+            cout<<a<<" "<<b<<" "<<c<<endl<<d<<" "<<e<<" "<<f<<endl<<g<<" "<<h<<" "<<i;
+            return 0;
+        }
