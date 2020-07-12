@@ -1,0 +1,21 @@
+Q https://codeforces.com/contest/432/problem/B
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+    int main(){
+    	int n;
+    	cin>>n;
+    	int h[n],a[n];
+    	vector<int>hc(100001,0);
+    	for(int i=0;i<n;i++){
+    		cin>>h[i]>>a[i];
+    		hc[h[i]]++;
+    	}
+    	for(int i=0;i<n;i++){
+    		int t=hc[a[i]];
+    		cout<<n-1+t<<" "<<n-1-t<<endl;
+    	}
+    	return 0;
+    }

@@ -1,0 +1,22 @@
+Q https://codeforces.com/problemset/problem/276/B
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main() 
+        {
+        	string s;
+        	cin>>s;
+        	int c=0;
+        	for(int i=0;i<s.size();i++)
+        	{
+        	    if((count(s.begin(),s.end(),s[i]))%2!=0)
+        	    c++;
+        	}
+        	if(c==0||(c%2==1))
+        	cout<<"First";
+        	else
+        	cout<<"Second";
+        	return 0;
+        }
