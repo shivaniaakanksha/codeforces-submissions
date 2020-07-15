@@ -1,0 +1,45 @@
+Q https://codeforces.com/problemset/problem/493/B
+
+CODE
+
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+ 
+main(){
+	ll int n,j=0,k=0,r;
+	vector <ll> a,b;
+	cin>>n;
+	for(ll i=0;i<n;i++){
+		cin>>r;
+		if(r<0){
+			b.push_back(abs(r));
+			j+=abs(r);
+		}
+		else{
+			a.push_back(r);
+			k+=r;
+		}
+	}
+	if(j!=k){
+		if(j>k)
+		cout<<"second";
+		else
+		cout<<"first";
+	}
+ 
+	
+	else if(a!=b){
+		if(a>b)
+		cout<<"first";
+		else
+		cout<<"second";		
+	}
+	else{
+	if(r>0)
+	cout<<"first";
+	else
+	cout<<"second";
+	}
+ 
+}
