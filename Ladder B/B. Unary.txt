@@ -1,0 +1,28 @@
+Q https://codeforces.com/contest/133/problem/B
+
+CODE    #include <bits/stdc++.h>
+        using namespace std;
+         
+        #define MOD 1000003
+        int main()
+        {
+            string s;
+            int i, ans=0;
+            cin>>s;
+            for(i=0; i<s.length(); i++)
+            {
+                ans<<=4;
+                if(s[i]=='>') ans+=8;
+                else if(s[i]=='<') ans+=9;
+                else if(s[i]=='+') ans+=10;
+                else if(s[i]=='-') ans+=11;
+                else if(s[i]=='.') ans+=12;
+                else if(s[i]==',') ans+=13;
+                else if(s[i]=='[') ans+=14;
+                else if(s[i]==']') ans+=15;
+                ans%=MOD;
+            }
+            cout<<ans<<endl;
+         
+            return 0;
+        }
