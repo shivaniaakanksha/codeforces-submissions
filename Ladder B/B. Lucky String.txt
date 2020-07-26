@@ -1,0 +1,17 @@
+Q https://codeforces.com/problemset/problem/110/B
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        int main(){
+        int n,i;
+        cin>>n;
+        char c;
+        c='a';
+        for(i=1;i<=n;i++){
+            if(c=='e')
+            c='a';
+            cout<<c;
+        c++;
+        }
+        }
