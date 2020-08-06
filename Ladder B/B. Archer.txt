@@ -1,0 +1,12 @@
+Q https://codeforces.com/problemset/problem/312/B
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+    int main(){
+    	float a,b,c,d;
+    	cin >> a >> b >> c >> d;
+    	float p=a/b,q=(1-c/d)*(1-a/b);
+    	printf("%.6f\n",(p/(1-q)));
+    }
