@@ -1,0 +1,17 @@
+Q https://codeforces.com/contest/182/problem/B
+
+CODE
+
+        #include<bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+            long long int d,i,n,p,len=0;
+            cin>>d>>n;
+            for(i=0;i<n;i++)
+            {
+                cin>>p;
+                len=len+(d-p);
+            }
+            cout<<len-(d-p);
+        }
