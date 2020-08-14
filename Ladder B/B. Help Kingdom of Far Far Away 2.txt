@@ -1,0 +1,48 @@
+Q https://codeforces.com/problemset/problem/143/B
+
+CODE
+
+    #include<bits/stdc++.h>
+    using namespace std;
+    main()
+    {
+    	string s;
+    	cin>>s;
+    	int f=0,i=0;
+    	if(s[0]=='-')
+    	{
+    		f=1;
+    		i=1;
+    	}
+    	string s1="",s2="";
+    	while(i<s.length() && s[i]!='.')
+    	s1+=s[i++];
+    	++i;
+    	int c=i+2;
+    	while(i<s.length() && i<c)
+    	s2+=s[i++];
+    	if(s2.length()==0)
+    	{
+    		s2+='0';
+    		s2+='0';
+    	}
+    	else if(s2.length()==1)
+    	s2+='0';
+    	string s3="";
+    	i=s1.length()-1;
+    	int x=0;
+    	while(i>=0)
+    	{
+    	   s3=s1[i]+s3;
+    	   ++x;
+    	   if(x%3==0 && i>0)
+    	   s3=','+s3;
+    	   --i;
+    	}
+    	if(f==1)
+    	cout<<"(";
+    	cout<<"$"<<s3<<"."<<s2;
+    	if(f==1)
+    	cout<<")";
+    	
+    }
