@@ -1,0 +1,27 @@
+Q https://codeforces.com/contest/192/problem/B
+
+CODE
+
+        #include <bits/stdc++.h>
+        using namespace std;
+        int main()
+        {
+        long long n,x,y;
+            cin>>n;
+        long long a[n],i;
+        for(i=0;i<n;i++)
+            cin>>a[i];
+        if(n==1)
+        {
+            cout<<a[0]<<endl;
+            return 0;
+        }
+        x=*max_element(a+1,a+n-1);
+        y=min(x,min(a[0],a[n-1]));
+        for(i=0;i<=n-2;i++)
+        {
+            if(a[i]<y&&a[i+1]<y)
+                y=max(a[i],a[i+1]);
+        }
+        cout<<y<<endl;
+        }
