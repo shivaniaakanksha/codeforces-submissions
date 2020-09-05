@@ -1,0 +1,22 @@
+Q https://codeforces.com/problemset/problem/195/B
+
+CODE
+
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int n, m, curr, cnt;
+     
+    int main() {
+    	cin >> n >> m;
+    	while (cnt < n) {
+    		if (curr < 1 || curr > m) curr = (m + 1) / 2;
+    		cout << curr << "\n";
+    		cnt++;
+    		if (curr == (m + 1) / 2 && m%2 == 1) curr--;
+    		else if (curr <= m / 2) curr = m +1 - curr;
+    		else curr = m - curr;
+     
+    	}
+    	return 0;
+    }
