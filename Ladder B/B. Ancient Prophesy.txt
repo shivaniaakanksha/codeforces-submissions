@@ -1,0 +1,34 @@
+Q https://codeforces.com/contest/260/problem/B
+
+CODE
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s,t;
+    int d,m,y,max1=0;
+    int mon[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    cin>>s;
+    unordered_map<string,int>ma;
+    for(int i=0;i<=s.length()-10;i++)
+    {
+        if(s[i]=='-'||s[i+1]=='-'||s[i+3]=='-'||s[i+4]=='-'||s[i+6]=='-'||s[i+7]=='-'||s[i+8]=='-'||s[i+9]=='-')
+            continue;
+        else if(s[i+2]=='-' && s[i+5]=='-')
+        {
+            t=s.substr(i,10);
+            d=stoi(t.substr(0,2));  m=stoi(t.substr(3,2));  y=stoi(t.substr(6,4));
+            if(y>=2013 && y<=2015 && m>=1 &&m<=12&& d>=1 && d<=mon[m-1])
+                ma[t]++;
+        }
+    }
+    for(auto i=ma.begin();i!=ma.end();i++)
+    {
+        if((*i).second>max1)
+        {
+            t=(*i).first;   max1=(*i).second;
+        }
+    }
+    cout<<t;
+}
